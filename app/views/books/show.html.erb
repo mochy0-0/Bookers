@@ -1,0 +1,11 @@
+<% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+<% else %>
+    <p><%= flash[:danger] %></p>
+<% end %>
+
+<span><b>Title:</b></span><%= @book.title %>
+<br>
+<span><b>Body:</b></span><%= @book.body %>
+
+<p><%= link_to "Edit", "/books/#{@book.id}/edit" %> | <%= link_to "Back", "/books" %> </p>
